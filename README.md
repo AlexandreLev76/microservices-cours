@@ -1,5 +1,7 @@
 # Microservices - Système de Gestion de Factures et Événements
 
+Lien vers le canva: https://www.canva.com/design/DAG4fUskBJ0/iNYXf-hnIvIrX_DZgT8kww/edit?utm_content=DAG4fUskBJ0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
 ## 🚀 Fonctionnalités
 
 Envoi de mails pour chaque action CRUD sur un évenement (ATTENTION, veuillez à bien changer le applicaiton.properties avec vos identifiants si vous voulez accéder à la boite mail)

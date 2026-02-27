@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(./mvnw test:*)",
+      "Bash(./mvnw dependency:tree:*)",
+      "Bash(jar tf:*)",
+      "Bash(python3:*)"
+    ]
+  }
+}

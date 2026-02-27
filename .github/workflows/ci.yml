@@ -1,0 +1,29 @@
+name: CI - Build Spring Boot
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: Build Maven project (no tests yet)
+    runs-on: ubuntu-latest
+
+    steps:
+      # Clone le dépôt
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Mise en place de Java
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+          cache: maven
+
+      # Build du projet sans exécuter les tests unitaires
+      - name: Build with Maven (skip tests)
+        run: mvn -B clean package -DskipTests

@@ -8,15 +8,13 @@ on:
 
 jobs:
   build:
-    name: Build Maven project (no tests yet)
+    name: Build et tests Maven
     runs-on: ubuntu-latest
 
     steps:
-      # Clone le dépôt
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Mise en place de Java
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
@@ -24,6 +22,5 @@ jobs:
           java-version: 21
           cache: maven
 
-      # Build du projet sans exécuter les tests unitaires
-      - name: Build with Maven (skip tests)
-        run: mvn -B clean package -DskipTests
+      - name: Build et exécution des tests
+        run: mvn -B clean verify
